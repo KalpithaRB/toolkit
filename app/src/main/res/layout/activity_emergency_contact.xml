@@ -1,0 +1,20 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:text="Emergency Contact 1" android:textStyle="bold" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    <TextView android:id="@+id/contact1Text" android:text="Not Set" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    <Button android:id="@+id/selectContact1" android:text="Select Contact 1" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+    <TextView android:text="Emergency Contact 2" android:textStyle="bold" android:layout_marginTop="16dp" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    <TextView android:id="@+id/contact2Text" android:text="Not Set" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    <Button android:id="@+id/selectContact2" android:text="Select Contact 2" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+    <TextView android:text="Emergency Contact 3" android:textStyle="bold" android:layout_marginTop="16dp" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    <TextView android:id="@+id/contact3Text" android:text="Not Set" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    <Button android:id="@+id/selectContact3" android:text="Select Contact 3" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+</LinearLayout>
