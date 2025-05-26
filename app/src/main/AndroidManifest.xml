@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
 
 
 
@@ -68,6 +70,9 @@
         </receiver>
 <!--        <uses-library android:name="org.osmdroid" android:required="true" />-->
         <activity android:name=".components.NearbyMapActivity" />
+
+        <activity android:name=".components.PoliceFeatureManager" />
+        <activity android:name=".components.EmergencyNumbersActivity"/>
 
 
 

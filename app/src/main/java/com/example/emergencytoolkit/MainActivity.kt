@@ -10,18 +10,17 @@ import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.emergencytoolkit.components.*
 import android.telephony.SmsManager
-import android.widget.TextView
+import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.example.emergencytoolkit.components.PoliceFeatureManager
+
 
 
 
@@ -58,6 +57,16 @@ class MainActivity : AppCompatActivity() {
         btnAlertSound.setOnClickListener {
             toggleAlertSound()
         }
+
+
+        val policeManager = PoliceFeatureManager(this)
+
+        val tvPoliceStation = findViewById<TextView>(R.id.tvPoliceStation)
+        val btnCallPolice = findViewById<ImageButton>(R.id.btnCallPolice)
+
+        policeManager.fetchNearestPoliceStation(tvPoliceStation)
+        policeManager.setupPoliceCallButton(btnCallPolice)
+
 
 
 
@@ -121,6 +130,13 @@ class MainActivity : AppCompatActivity() {
             val inten = Intent(this, NearbyMapActivity::class.java)
             startActivity(inten)
         }
+
+        findViewById<Button>(R.id.btnEmergencyNumbers).setOnClickListener {
+            startActivity(Intent(this, EmergencyNumbersActivity::class.java))
+        }
+
+
+
 
 
 
@@ -247,6 +263,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Alert sound playing", Toast.LENGTH_SHORT).show()
         }
     }
+
 
 
 
